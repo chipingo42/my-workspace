@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio two</title>
+    <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+       body {
+           font-family: sans-serif;
+       }
+
+       header {
+           position: fixed;
+           background: #222424;
+           padding: 20px;
+           width: 100%;
+           height: 60px;
+       }
+
+       .left_area h3 {
+           color: #fff;
+           margin: 0;
+           text-transform: uppercase;
+           font-size: 22px;
+           font-weight: 900;
+       }
+
+       .left_area span {
+           color: #1dc4e7;
+           padding-left: 7px;
+       }
+
+       .logout_btn {
+           /* padding: 5px; */
+           width: 70px;
+           height: 35px;
+           text-align: center;
+           align-items: center;
+           padding-top: 7px;
+           background: #198303;
+           text-decoration: none;
+           float: right;
+           margin-top: -30px;
+           margin-right: 40px;
+           border-radius: 2px;
+           font-size: 15px;
+           font-weight: 6;
+           color: #fff;
+           transition: 0.5s;
+           transition-property: background;
+       }
+
+       .logout_btn:hover {
+          background: #1dc4e7;
+       }
+        .img {
+            margin: 0 20px;
+            padding-top: 2px;
+            background-color: #fff;
+           
+        }
+
+        /* sidebar */
+        .sidebar {
+            background: linear-gradient(#233666,#233662,#2f323a,#233662);
+            margin-top: 60px;
+            padding-top: 30px;
+            position: fixed;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            transition: 0.5s;
+            transition-property: left;
+    }
+
+    .sidebar .profile_image {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        margin-bottom: 10px;
+    }
+
+    .sidebar h4 {
+       color: #fff;
+       margin-top: 0;
+       margin-bottom: 20px;
+    }
+
+    .sidebar a {
+        color: #fff;
+        display: block;
+        width: 100%;
+        line-height: 60px;
+        text-decoration: none;
+        padding-left: 40px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        transition-property: background;
+    }
+
+    .sidebar a:hover {
+        background: #1dc4e7;
+    }
+
+    /* label */
+    label #sidebar_btn {
+        z-index: 1;
+        background-color: #fff;
+        position: fixed;
+        cursor: pointer;
+        left: 300px;
+        font-size: 20px;
+        margin: 5px 0;
+        transition: 0.5s;
+        transition-property: background;
+    }
+
+    label #sidebar_btn:hover {
+        background-color: #1dc4e7;
+    }
+
+    #check {
+        display: none;
+    }
+     
+     #check:checked ~ .sidebar {
+         left: -190px;
+     }
+
+     #check:checked ~ .sidebar a span {
+         display: none;
+     }
+
+     #check:checked ~ .sidebar a {
+         font-size: 20px;
+         margin-left: 150px;
+         width: 95px;
+     }
+
+     .content {
+         margin-left: 250px;
+         background: url('./img/aerial-view-beach-beautiful-462162.jpg') no-repeat center center/cover;
+         height: 100vh;
+         transition: 0.5s;
+     }
+
+     #check:checked ~ .content {
+        margin-left: 60px;
+     }
+
+
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="check">
+    <header>
+        <label for="check">
+            <img src="./icon/bars-solid.svg" height="20px" alt="" id="sidebar_btn">
+        </label>
+        <div class="left_area">
+            <h3> chebe Coding<span>Show</span></h3>
+        </div>
+        <div class="right_area">
+            <a href="#" class="logout_btn">Logout</a>
+        </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <center>
+            <img src="./img/Snapchat-1938625839.jpg" class="profile_image" height="90px" width="100px" alt="">
+            <h4>Victor</h4>
+        </center>
+        <a href="http://www.facebook.com"><img class="img" src="./icon/hotel.svg" height="20px" alt=""><span>home</span></a>
+        <a href="#"><img class="img" src="./icon/photo-camera.svg" height="20px" alt=""><span>dashboard</span></a>
+        <a href="#"><img class="img" src="./icon/twitter.svg" height="20px" alt=""><span>message</span></a>
+        <a href="#"><img class="img" src="./icons/user-circle-solid.svg" height="20px" alt=""><span>chebe</span></a>
+        <a href="#"><img class="img" src="./icons/2 icon/apple-brands.svg" height="20px" alt=""><span>hotel</span></a>
+        <a href="#"><img class="img" src="./icon/dumbbell.svg" height="20px" alt=""><span>house</span></a>
+    </div>
+
+    <div class="content"></div><!-- background image in css -->
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choose</title>
+    <style>
+       body {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           background: #23b499;
+           color: #fff;
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       }
+
+       select {
+           -webkit-appearance: none;
+           -moz-appearance: none;
+           -ms-appearance: none;
+           appearance: none;
+           outline: 0;
+           box-shadow: none;
+           border: 0!important;
+           background: #5c6664;
+           background-image: none;
+           flex: 1;
+           padding: 0.5em;
+           color: #fff;
+           cursor: pointer;
+           font-size: 1em;
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       }
+       section::-ms-expand {
+           display: none;
+       }
+
+       .select {
+           position: relative;
+           display: flex;
+           width: 20em;
+           height: 3em;
+           line-height: 3;
+           background: #5c6664;
+           border-radius: -25em;
+       }
+
+       .select::after {
+          content: '\25BC';
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 0.1em;
+          background: #2b2e2e;
+          cursor: pointer;
+          pointer-events: none;
+          transition: .25s all ease;
+       }
+       
+       .select:hover:after {
+          color: #23b499;   
+       }
+
+    </style>
+</head>
+<body>
+    
+    <h1>choose a book format</h1>
+    <div class="select">
+        <select name="format" id="format">
+            <option selected disabled>choose a book format</option>
+            <option value="pd">dpf</option>
+            <option value="pdf">dpf</option>
+            <option value="pdd">dpf</option>
+            <option value="pdg">dpf</option>
+            <option value="pdp">dpf</option>
+        </select>
+    </div>
+</body>
+</html>

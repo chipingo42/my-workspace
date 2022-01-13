@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exmaple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        .one {
+            background: brown;
+            height: 100vh;
+           text-align: center;
+           align-items: center;
+           justify-content: center;
+           padding: 160px;
+           color: #fff;
+           font-size: 40px;
+        }
+
+        .itmes {
+            background: #2c2323b7;
+            /* width: 400px; */
+            height: 70px;
+            padding: 7px;
+            clip-path: circle();
+        }
+
+        .one::after,
+        .one::before {
+            position: absolute;
+            background: brown;
+            content: '';
+            width: 300px;
+            height: 150px;
+            bottom: 0;
+            z-index: 100;
+        } 
+
+        .one::before {
+          right: 50%;
+          transform: skew(0, 20deg);
+        }
+        .one::after {
+          left: 50%;
+          transform: skew(0, -20deg);
+        }
+
+        .two {
+            background: #ffff00e3;
+            height: 100vh;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 160px;
+            font-size: 40px;
+        }
+
+        .two img {
+            height: 170px;
+            width: 100px;
+            /* clip-path: circle(100%); */
+            clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100% 0);
+        }
+
+        .three {
+            background: blue;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="one">
+        <h2>section one</h2>
+        <div class="itmes">:)</div>
+    </section>
+
+    <section class="two">
+        <h2>section two</h2>
+        <span><img src="./img/Snapchat-1938625839.jpg"  alt=""></span>
+    </section>
+
+    <section class="three">
+        <h2>section three</h2>
+    </section>
+</body>
+</html>

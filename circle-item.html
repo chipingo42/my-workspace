@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fffffb;
+            text-align: center;
+        }
+
+        .one {
+            background: #ffc145;
+            height: 100vh;
+            padding-top: 100px;
+            /* margin-top: 70px; */
+
+        }
+
+        .one--itme {
+            background: rgba(0, 0, 0, .3);
+            color: rgba(0, 0, 0, .3);
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            /* padding-top: 80px; */
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 2em;
+        }
+ 
+        .one::after,
+        .one::before {
+            position: absolute;
+            content: '';
+            width: 150px;
+            height: 150px;
+            background:#ffc145;
+            bottom: -1rem;
+            z-index: 100;
+        }
+
+        .one::before {
+            right: 50%;
+            transform: skew(0, 20deg);
+        }
+        .one::after {
+            left: 50%;
+            transform: skew(0, -20deg);
+        }
+        
+        .two {
+            background: #ff6b6c;
+            height: 100vh;
+            padding-top: 170px;
+        }
+
+        .two img {
+            height: 250px;
+            /* clip-path: circle(100%); */
+            clip-path: polygon(25px 100px, 100% 0, 100% 100%, 0 100%);
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <section class="one">
+        <h1>section one</h1>
+        <div class="one--itme">:)</div>
+    </section>
+
+    <section class="two">
+        <h1>section two</h1>
+       <img src="./img/splash-1.jpg" alt="">
+    </section>
+
+    <section class="three">
+        <h1>section three</h1>
+        <!-- <div class="one--itme">:)</div> -->
+    </section>
+</body>
+</html>

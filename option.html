@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>options</title>
+    <style>
+        :root {
+            --primary-color:#ba57e9;
+            --secondary-color: #4c75e6;
+        }
+    body {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right bottom, var(--primary-color), var(--secondary-color)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 5rem;
+
+    }
+
+
+
+    .dropdown {
+        width: 38rem;
+        position: relative;
+    }
+
+    .dropdown:hover .dropdown-list {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown-select {
+       padding: 1.5rem;
+       border-radius: 4px;
+       background: #fff;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       font-size: 1.6rem;
+       cursor: pointer;
+    }
+
+    .dropdown-select img {
+        height: 20px;
+    }
+    
+    .dropdown-list {
+        border-radius: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 110%;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: opacity 0.2s linear, visibility 0.2s linear;
+    }
+
+    .dropdown-list_items {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+
+
+
+    </style>
+</head>
+<body>
+   <div class="dropdown">
+       <div class="dropdown-select">
+           <span class="select">selected item</span>
+           <img src="./icon/ellipsis-v-solid.svg" alt="">
+       </div>
+       <div class="dropdown-list">
+           <div class="dropdown-list_items">pros</div>
+           <div class="dropdown-list_items">coca</div>
+           <div class="dropdown-list_items">hones</div>
+       </div>
+   </div>
+</body>
+</html>
